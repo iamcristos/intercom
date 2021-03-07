@@ -1,15 +1,12 @@
-const textReader = require('./utilities/textReader');
-const writeToFile = require('./utilities/writeToFile');
+const {textReader, writeToFile} = require('./utilities/fileHandler');
 const db = require('./utilities/db');
+
 
 (async function home() {
     try {
-        const obj = {};
+        db.newInstance()
         await textReader();
         db.sortById();
-        // db.getData().forEach(item => {
-
-        // })
         writeToFile(db.getData(), './output.txt')
         console.log('done writting here')
     } catch (error) {

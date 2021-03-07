@@ -18,3 +18,7 @@ For development, you will need to have installed on your machine:
 
 - In root directory, run `npm start`
 - Customer located within 100km would be outputed in output.txt
+
+### How to test
+
+- npm run test
